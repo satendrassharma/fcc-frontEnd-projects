@@ -1,0 +1,42 @@
+#drum-machine {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  box-shadow: 0px 0px 4px lightgrey;
+  padding: 20px;
+}
+
+#display {
+  height: 50px;
+  background: rgb(240, 240, 240);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.drum-pad {
+  text-align: center;
+  box-shadow: 0px 0px 4px lightgrey;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+.drum-pad:hover {
+  box-shadow: 1px 1px 4px lightgrey;
+}
+
+.clip {
+}
+
+@media screen and (max-width:425px){
+  #drum-machine{
+    width:80%;
+  }
+}
