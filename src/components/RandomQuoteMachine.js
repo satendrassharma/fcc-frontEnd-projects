@@ -10,11 +10,11 @@ const RandomQuoteMachine = () => {
     getRandomQuote();
   }, []);
   const getRandomQuote = () => {
-    fetch("https://api.quotable.io/random")
+    fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
       .then(response => response.json())
       .then(data => {
-        setText(data.content);
-        setAuthor(data.author);
+        setText(data.quote);
+        setAuthor(data.character);
       });
   };
   return (
