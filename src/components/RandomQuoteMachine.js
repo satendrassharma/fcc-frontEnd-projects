@@ -13,8 +13,8 @@ const RandomQuoteMachine = () => {
     fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
       .then(response => response.json())
       .then(data => {
-        setText(data.quote);
-        setAuthor(data.character);
+        setText(data[0].quote);
+        setAuthor(data[0].character);
       });
   };
   return (
